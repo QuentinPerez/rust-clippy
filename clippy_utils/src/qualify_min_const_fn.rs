@@ -253,6 +253,7 @@ fn check_place<'tcx>(tcx: TyCtxt<'tcx>, place: Place<'tcx>, span: Span, body: &B
             },
             ProjectionElem::ConstantIndex { .. }
             | ProjectionElem::Downcast(..)
+            | ProjectionElem::OpaqueCast(_)
             | ProjectionElem::Subslice { .. }
             | ProjectionElem::Deref
             | ProjectionElem::Index(_) => {},
